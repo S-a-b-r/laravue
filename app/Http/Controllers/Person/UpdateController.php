@@ -13,6 +13,6 @@ class UpdateController extends Controller
     public function __invoke(UpdateRequest $req, Person $person){
         $data = $req->validated();
         $person->update($data);
-        return $data;
+        return response([]);
     }
 }

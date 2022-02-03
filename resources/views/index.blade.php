@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <Index></Index>
+    <Index style="margin-left: 50px"></Index>
 @endsection

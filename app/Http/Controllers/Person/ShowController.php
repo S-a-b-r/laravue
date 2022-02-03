@@ -7,10 +7,9 @@ use App\Http\Resources\Person\PesonResource;
 use App\Models\Person;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class ShowController extends Controller
 {
-    public function __invoke(){
-        $people = Person::all();
-        return PesonResource::collection($people);
+    public function __invoke(Person $person){
+        return new PesonResource($person) ;
     }
 }

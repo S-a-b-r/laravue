@@ -13,6 +13,7 @@ class StoreController extends Controller
     public function __invoke(StoreRequest $req){
         $data = $req->validated();
         Person::firstOrCreate($data);
-        return $data;
+        return response([]);
+
     }
 }
